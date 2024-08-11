@@ -57,8 +57,15 @@ const toggleMenu = function(){
       top: 5rem;
       z-index: 1100;
     }
+    &__button-icon{
+      width: 100%;
+      height: 100%;
+    }
     &__button-link{
       cursor: pointer;
+      height: 100%;
+      width: 100%;
+      display: block;
     }
     &__nav{
       height: 100%;
@@ -110,5 +117,30 @@ const toggleMenu = function(){
 
   .router-link-exact-active{
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px){
+    .header{
+      &__button{
+        right: 2.3rem;
+        top: 3rem;
+        height: 3rem;
+        width: 3rem;
+      }
+      &__list-link{
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 567px) {
+    .header{
+      &__button{
+        right: 1.5rem;
+        top: 2rem;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
   }
 </style>
