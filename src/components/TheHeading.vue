@@ -31,9 +31,9 @@ const toggleMenu = function(){
 </script>
 
 <template>
-<header class="header">
+<header class="header header__fixed">
   <div class="header__button">
-    <span class="header__button-link" href="#" @click="toggleMenu">
+    <span class="header__button-link" @click="toggleMenu">
       <img class="header__button-icon" src="../assets/img/menu.svg" alt="">
     </span>
   </div>
@@ -51,8 +51,19 @@ const toggleMenu = function(){
 
 <style scoped lang="scss">
   .header{
-    &__button{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    &__fixed{
       position: fixed;
+      top: 2rem;
+      left: 2rem;
+      right: 2rem;
+      padding: 2rem;
+      width: calc(100% - 4rem);
+      background: #D9D9D9;
+    }
+    &__button{
       right: 5rem;
       top: 5rem;
       z-index: 1100;
@@ -121,6 +132,9 @@ const toggleMenu = function(){
 
   @media (max-width: 768px){
     .header{
+      &__fixed{
+        top: 1rem;
+      }
       &__button{
         right: 2.3rem;
         top: 3rem;
@@ -135,6 +149,12 @@ const toggleMenu = function(){
 
   @media (max-width: 567px) {
     .header{
+      &__fixed{
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
       &__button{
         right: 1.5rem;
         top: 2rem;

@@ -9,20 +9,20 @@
   }
 
   .app{
-    padding: 1rem 5rem 2rem 1rem;
-    height: calc(100vh - 2rem);
+    padding: 5rem 2rem 4rem 2rem;
+    height: calc(100dvh - 2rem);
     width: calc(100vw - 2rem);
   }
 }
 
 @media (max-width: 576px) {
   body{
-    padding: 0rem;
+    padding: 0;
   }
 
   .app{
-    padding: 1rem 4rem 2rem 1rem;
-    height: 100vh;
+    padding: 5rem 1rem 4rem 1rem;
+    height: 100dvh;
     width: 100vw;
   }
 }
