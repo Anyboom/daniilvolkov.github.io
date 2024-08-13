@@ -14,12 +14,12 @@ body {
 
 .app {
   background: $color-gray;
-  height: calc(100vh - 4rem);
+  height: calc(100dvh - 4rem);
   width: calc(100vw - 4rem);
   position: relative;
   overflow-y: scroll;
   overflow-x: scroll;
-  padding: 5rem 10rem 5rem 6rem;
+  padding: 5rem 4rem 4rem 4rem;
   scrollbar-width: none;
 }
 
