@@ -8,55 +8,55 @@
 
   let images = ref<IImage[]>([
     {
-      src: "/src/assets/img/icons/bootstrap.svg",
+      src: "img/bootstrap.svg",
       background: "#7952b3",
     },
     {
-      src: "/src/assets/img/icons/figma.svg",
+      src: "img/figma.svg",
       background: "#03011c",
     },
     {
-      src: "/src/assets/img/icons/git.svg",
+      src: "img/git.svg",
       background: "#f44d27",
     },
     {
-      src: "/src/assets/img/icons/javascript.svg",
+      src: "img/javascript.svg",
       background: "#f0dc4e",
     },
     {
-      src: "/src/assets/img/icons/jquery.svg",
+      src: "img/jquery.svg",
       background: "#182a38",
     },
     {
-      src: "/src/assets/img/icons/npm.svg",
+      src: "img/npm.svg",
       background: "#cc3534",
     },
     {
-      src: "/src/assets/img/icons/tailwind.svg",
+      src: "img/tailwind.svg",
       background: "#161d2d",
     },
     {
-      src: "/src/assets/img/icons/typescript.svg",
+      src: "img/typescript.svg",
       background: "#2d79c7",
     },
     {
-      src: "/src/assets/img/icons/vite.svg",
+      src: "img/vite.svg",
       background: "#2fd5c8",
     },
     {
-      src: "/src/assets/img/icons/sass.svg",
+      src: "img/sass.svg",
       background: "#cc6699",
     },
     {
-      src: "/src/assets/img/icons/css.svg",
+      src: "img/css.svg",
       background: "#214ce5",
     },
     {
-      src: "/src/assets/img/icons/html.svg",
+      src: "img/html.svg",
       background: "#e34e25",
     },
     {
-      src: "/src/assets/img/icons/vue.svg",
+      src: "img/vue.svg",
       background: "#1f2027",
     }
   ]);
