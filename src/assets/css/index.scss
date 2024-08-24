@@ -1,5 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "roboto";
-@import "grids";
 @import "variables";
 @import "reset";
 @import "main";
