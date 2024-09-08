@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "roboto";
+  ::selection {
+    @apply bg-gray-darken;
+  }
+  html {
+    @apply w-full;
+    @apply h-full;
+    @apply font-main;
+    @apply text-primary;
+  }
+}
