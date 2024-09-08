@@ -2,18 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "roboto";
-@import "variables";
-
 @layer base {
+  @import "roboto";
   ::selection {
-    background: #b3b3b3;
+    @apply bg-gray-darken;
   }
   html {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    font-family: "Roboto", system-ui, sans-serif;
-    color: #333333;
+    @apply w-full;
+    @apply h-full;
+    @apply font-main;
+    @apply text-primary;
   }
 }

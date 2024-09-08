@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import TBadge from "@/components/badge/BadgeItem.vue";
+  import TBadge from "@/components/badge/BadgeListItem.vue";
 
   const props = defineProps({
     items: {
@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-5">
+  <div class="flex flex-wrap gap-4">
     <t-badge v-for="item in props.items" :key="item">{{ item }}</t-badge>
   </div>
 </template>
