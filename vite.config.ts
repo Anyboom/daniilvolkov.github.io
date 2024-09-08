@@ -1,12 +1,14 @@
-import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
+
 import tailwindcss from "tailwindcss";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import eslint from "vite-plugin-eslint";
+import { resolve } from "path";
+
+import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,17 +18,12 @@ export default defineConfig({
   },
   css: {
     postcss: {
-      plugins: [tailwindcss()],
-    },
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "@/assets/css/variables.scss";`,
-      },
+      plugins: [tailwindcss, autoprefixer],
     },
   },
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@": resolve(__dirname, "src"),
     },
   },
 });
