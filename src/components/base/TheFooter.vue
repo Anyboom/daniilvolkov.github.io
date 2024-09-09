@@ -1,9 +1,5 @@
 <script setup lang="ts">
   const props = defineProps({
-    mail: {
-      type: String,
-      required: true,
-    },
     phone: {
       type: String,
       required: true,
@@ -20,12 +16,8 @@
 </script>
 
 <template>
-  <footer
-    class="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between my-14"
-  >
-    <div class="inline-flex gap-2 align-items-center">
-      <span>{{ props.mail }}</span>
-      <span>|</span>
+  <footer class="flex gap-0 flex-row justify-between my-14">
+    <div>
       <span>{{ props.phone }}</span>
     </div>
     <div class="flex gap-1">
