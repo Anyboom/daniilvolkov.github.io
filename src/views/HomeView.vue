@@ -14,7 +14,6 @@
   import TModal from "@/components/base/TModal.vue";
   import TButton from "@/components/base/TButton.vue";
 
-  const mail = "anyboom@mail.ru";
   const phone = "7-904-018-27-72";
   const vk = "https://vk.com/anyboom";
   const github = "https://github.com/anyboom";
@@ -47,43 +46,18 @@
 
   const portfolioImages: PortfolioItemType[] = [
     {
-      url: "/img/portfolio_2.png",
+      minuature: "/img/black&white/miniature.png",
+      url: "/img/black&white/portfolio.png",
       alt: "#",
     },
     {
-      url: "/img/portfolio_3.png",
+      minuature: "/img/tajam/miniature.png",
+      url: "/img/tajam/portfolio.png",
       alt: "#",
     },
     {
-      url: "/img/portfolio_4.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_2.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_3.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_4.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_2.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_3.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_4.png",
-      alt: "#",
-    },
-    {
-      url: "/img/portfolio_4.png",
+      minuature: "/img/pinwall/miniature.png",
+      url: "/img/pinwall/portfolio.png",
       alt: "#",
     },
   ];
@@ -104,34 +78,25 @@
     <t-section>
       <t-title>Обо мне</t-title>
       <t-paragraph>
-        Даниил, 22 года, является талантливым фронтенд-разработчиком с годом
-        опыта в индустрии программирования. В своей профессиональной
-        деятельности он сосредоточен на создании интуитивно понятных
-        интерфейсов, способствующих позитивному пользовательскому опыту. Даниил
-        гордится тем, что разработал крупный сервис, который стал востребованным
-        среди пользователей благодаря своей функциональности и
-        удобству.</t-paragraph
-      >
-
+        Мое увлечение программированием началось еще в детстве, когда я старался
+        разобраться, как написать небольшой скрипт для любимой игры. Этот первый
+        шаг открыл для меня мир возможностей, и вскоре я начал посещать
+        тематические кружки и участвовать в олимпиадах по программированию, где
+        не раз занимал призовые места. С течением времени я поступил в колледж
+        по специальности, которую так долго хотел освоить. Образование дало мне
+        прочную базу знаний, которые я с успехом применил на практике в своей
+        работе.
+      </t-paragraph>
       <t-paragraph>
-        В своей работе он активно использует современные технологии, такие как
-        HTML, CSS и JavaScript, а также библиотеки и фреймворки, такие как React
-        или Vue.js. Это позволяет ему создавать высококачественные
-        веб-приложения, соответствующие актуальным требованиям
-        рынка.</t-paragraph
-      >
-
+        На текущем этапе своей карьеры я активно использую современные
+        проверенные технологии, такие как HTML, CSS, JavaScript и Vue. Это
+        позволяет мне создавать высококачественные веб-приложения, которые
+        радуют пользователей своей функциональностью и удобством.
+      </t-paragraph>
       <t-paragraph>
-        Помимо программирования, Даниил увлекается фотографией. Этот творческий
-        хобби помогает ему развивать глаз на детали и эстетику, что, безусловно,
-        благоприятно сказывается на его работе как разработчика.</t-paragraph
-      >
-
-      <t-paragraph>
-        Как личность, Даниил отличается ответственностью, креативностью и
-        стремлением к постоянному обучению, что позволяет ему эффективно решать
-        задачи и добиваться успехов в карьере. Он всегда ищет новые возможности
-        для личного и профессионального роста.</t-paragraph
+        Помимо программирования, я увлекаюсь фотографией. Это творческое хобби
+        развивает мой глаз на детали и эстетику, что, безусловно, положительно
+        сказывается на моей работе как разработчика.</t-paragraph
       >
     </t-section>
     <t-section>
@@ -147,7 +112,7 @@
           @click="showImage(item)"
         >
           <portfolio-list-item-image
-            :image="item.url"
+            :image="item.minuature"
             :alt="item.alt"
           ></portfolio-list-item-image>
         </portfolio-list-item>
@@ -159,12 +124,7 @@
         <t-button link @click="loadMore" label="Показать еще"></t-button>
       </div>
     </t-section>
-    <the-footer
-      :mail="mail"
-      :phone="phone"
-      :github="github"
-      :vk="vk"
-    ></the-footer>
+    <the-footer :phone="phone" :github="github" :vk="vk"></the-footer>
   </t-container>
   <t-modal v-model="open">
     <img
