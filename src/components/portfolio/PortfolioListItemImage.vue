@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <img class="w-full" :src="props.image" :alt="props.alt" />
+  <img class="w-full h-full" :src="props.image" :alt="props.alt" />
 </template>
 
 <style scoped lang="scss"></style>
