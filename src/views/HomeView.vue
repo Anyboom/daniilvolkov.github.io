@@ -9,10 +9,12 @@
   import PortfolioListItem from "@/components/portfolio/PortfolioListItem.vue";
   import PortfolioListItemImage from "@/components/portfolio/PortfolioListItemImage.vue";
   import PortfolioList from "@/components/portfolio/PortfolioList.vue";
-  import { computed, ref } from "vue";
+  import { computed, onMounted, ref } from "vue";
   import type { PortfolioItemType } from "@/types/PotrfolioItemType";
   import TModal from "@/components/base/TModal.vue";
   import TButton from "@/components/base/TButton.vue";
+  import TImage from "@/components/base/TImage.vue";
+  import TLoader from "@/components/base/TLoader.vue";
 
   const phone = "7-904-018-27-72";
   const vk = "https://vk.com/anyboom";
@@ -71,9 +73,16 @@
   function loadMore() {
     portfolioImagesVisible.value += step;
   }
+
+  const isLoading = ref(true);
+
+  onMounted(() => (isLoading.value = false));
 </script>
 <template>
-  <t-container>
+  <div v-if="isLoading" class="loader-wrapper">
+    <t-loader></t-loader>
+  </div>
+  <t-container v-else>
     <the-heading></the-heading>
     <t-section>
       <t-title>Обо мне</t-title>
@@ -127,16 +136,20 @@
     <the-footer :phone="phone" :github="github" :vk="vk"></the-footer>
   </t-container>
   <t-modal v-model="open">
-    <img
-      v-if="selectedImage"
-      class="w-full h-full"
-      :src="selectedImage.url"
-      :alt="selectedImage.alt"
-    />
+    <t-image v-if="selectedImage" :image="selectedImage"></t-image>
   </t-modal>
 </template>
 
 <style>
+  .loader-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .loader {
+      margin: 0 auto;
+    }
+  }
+
   .v-enter-from,
   .v-leave-from {
     opacity: 0;
