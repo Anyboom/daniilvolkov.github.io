@@ -13,4 +13,29 @@
     @apply font-main;
     @apply text-primary;
   }
+  .loader-wrapper {
+    @apply flex;
+    @apply h-full;
+    @apply items-center;
+    .loader {
+      @apply mx-auto;
+    }
+  }
+
+  .v-enter-from,
+  .v-leave-from {
+    @apply opacity-0;
+  }
+
+  .v-enter-to,
+  .v-leave-to {
+    @apply opacity-100;
+  }
+
+  .v-enter-active,
+  .v-leave-active {
+    @apply transition-opacity;
+    @apply duration-500;
+    @apply ease-out;
+  }
 }

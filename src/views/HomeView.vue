@@ -9,12 +9,11 @@
   import PortfolioListItem from "@/components/portfolio/PortfolioListItem.vue";
   import PortfolioListItemImage from "@/components/portfolio/PortfolioListItemImage.vue";
   import PortfolioList from "@/components/portfolio/PortfolioList.vue";
-  import { computed, onMounted, ref } from "vue";
+  import { computed, ref } from "vue";
   import type { PortfolioItemType } from "@/types/PotrfolioItemType";
   import TModal from "@/components/base/TModal.vue";
   import TButton from "@/components/base/TButton.vue";
   import TImage from "@/components/base/TImage.vue";
-  import TLoader from "@/components/base/TLoader.vue";
 
   const phone = "7-904-018-27-72";
   const vk = "https://vk.com/anyboom";
@@ -73,18 +72,11 @@
   function loadMore() {
     portfolioImagesVisible.value += step;
   }
-
-  const isLoading = ref(true);
-
-  onMounted(() => (isLoading.value = false));
 </script>
 <template>
-  <div v-if="isLoading" class="loader-wrapper">
-    <t-loader></t-loader>
-  </div>
-  <t-container v-else>
-    <the-heading></the-heading>
-    <t-section>
+  <t-container>
+    <the-heading v-once></the-heading>
+    <t-section v-once>
       <t-title>Обо мне</t-title>
       <t-paragraph>
         Мое увлечение программированием началось еще в детстве, когда я старался
@@ -108,7 +100,7 @@
         сказывается на моей работе как разработчика.</t-paragraph
       >
     </t-section>
-    <t-section>
+    <t-section v-once>
       <t-title>Использую в работе</t-title>
       <t-badge-list :items="skills"></t-badge-list>
     </t-section>
@@ -139,29 +131,3 @@
     <t-image v-if="selectedImage" :image="selectedImage"></t-image>
   </t-modal>
 </template>
-
-<style>
-  .loader-wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    .loader {
-      margin: 0 auto;
-    }
-  }
-
-  .v-enter-from,
-  .v-leave-from {
-    opacity: 0;
-  }
-
-  .v-enter-to,
-  .v-leave-to {
-    opacity: 1;
-  }
-
-  .v-enter-active,
-  .v-leave-active {
-    transition: opacity 500ms ease-out;
-  }
-</style>

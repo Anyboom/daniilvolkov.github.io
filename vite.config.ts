@@ -23,4 +23,9 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  build: {
+    minify: true,
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+  },
 });
