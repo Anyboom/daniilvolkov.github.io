@@ -47,6 +47,16 @@
 
   const portfolioImages: PortfolioItemType[] = [
     {
+      minuature: "/img/profalpstroi/miniature.png",
+      url: "/img/profalpstroi/portfolio.jpg",
+      alt: "#",
+    },
+    {
+      minuature: "/img/mam/miniature.png",
+      url: "/img/mam/portfolio.jpg",
+      alt: "#",
+    },
+    {
       minuature: "/img/black&white/miniature.png",
       url: "/img/black&white/portfolio.png",
       alt: "#",
