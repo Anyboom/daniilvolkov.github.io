@@ -8,15 +8,12 @@ const today = new Date();
 ---
 
 <footer>
-  <Container className="flex justify-between py-8 pt-16 md:pt-40 md:pb-20">
-    <a href="/" aria-label="Home">
-      <Logo />
-    </a>
+  <Container className="flex justify-end py-8 pt-16 md:pt-40 md:pb-20">
     <div class="text-right">
       <nav class="text-sm md:text-base">
         <ul class="flex flex-col gap-4 md:gap-8 sm:flex-row justify-end">
           <li>
-            <HeaderLink href="/uses">Что использую</HeaderLink>
+            <HeaderLink href="/uses">Что я использую</HeaderLink>
           </li>
           <li>
             <HeaderLink href={GITHUB_URL}>ГитХаб</HeaderLink>

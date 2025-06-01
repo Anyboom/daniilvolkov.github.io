@@ -12,6 +12,10 @@
   font-display: swap;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 .link,
 .article a {
   @apply text-blue-600 no-underline decoration-blue-500/50 dark:text-gray-400 dark:underline dark:decoration-gray-700 dark:decoration-1;

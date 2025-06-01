@@ -31,28 +31,6 @@ const description = props.description || SITE_DESCRIPTION;
         ],
         ...props.extend,
       }}
-      openGraph={{
-        basic: {
-          title,
-          type: "website",
-          image: "https://devinschulz.com/social-media.png",
-        },
-        image: {
-          width: 1600,
-          height: 1000,
-        },
-        optional: {
-          description,
-          siteName: SITE_TITLE,
-        },
-        ...props.openGraph,
-      }}
-      twitter={{
-        card: "summary_large_image",
-        title,
-        description,
-        image: "https://devinschulz.com/social-media.png",
-      }}
     />
   </head>
   <body

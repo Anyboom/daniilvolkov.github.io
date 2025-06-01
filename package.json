@@ -1,5 +1,5 @@
 {
-  "name": "dangerous-debris",
+  "name": "anyboom",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -32,8 +32,5 @@
     "prettier": "3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.5"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
