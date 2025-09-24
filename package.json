@@ -17,7 +17,9 @@
     }
   },
   "lint-staged": {
-    "*.(js|jsx|astro|css)": ["npm run format", "git add"]
+    "*.(js|jsx|astro|css)": [
+      "npm run format"
+    ]
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
