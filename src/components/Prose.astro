@@ -5,11 +5,6 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<div
-  class:list={[
-    "prose md:prose-lg dark:prose-invert article prose-headings:font-semibold",
-    className,
-  ]}
->
+<div class:list={["prose md:prose-lg dark:prose-invert article prose-headings:font-semibold", className]}>
   <slot />
 </div>
