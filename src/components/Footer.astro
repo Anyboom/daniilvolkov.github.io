@@ -1,5 +1,5 @@
 ---
-import { GITHUB_URL } from "@/consts";
+import { GITHUB_URL, TELEGRAM_URL } from "@/consts";
 import Container from "@/components/Container.astro";
 import HeaderLink from "@/components/HeaderLink.astro";
 
@@ -16,6 +16,9 @@ const today = new Date();
           </li>
           <li>
             <HeaderLink href={GITHUB_URL}>ГитХаб</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink href={TELEGRAM_URL}>Телеграм</HeaderLink>
           </li>
         </ul>
       </nav>

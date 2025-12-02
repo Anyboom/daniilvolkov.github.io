@@ -3,13 +3,10 @@ import Container from "@/components/Container.astro";
 import Layout from "@/components/Layout.astro";
 import Masthead from "@/components/Masthead.astro";
 import Prose from "@/components/Prose.astro";
-import { GITHUB_URL } from "@/consts";
+import { GITHUB_URL, TELEGRAM_URL } from "@/consts";
 ---
 
-<Layout
-  title="Контакты"
-  description="Connect with Devin Schulz - an experienced creative developer ready to bring your digital ideas to life. Reach out for collaborations, inquiries, or just to say hello."
->
+<Layout title="Контакты">
   <Container>
     <Masthead title="Контакты" />
     <Prose>
@@ -19,7 +16,7 @@ import { GITHUB_URL } from "@/consts";
         возможное, чтобы ответить вам как можно быстрее.
       </p>
       <p>
-        Вы можете связаться со мной в телеграме: <a href="https://t.me/anyboom" class="link">@anyboom</a>
+        Вы можете связаться со мной в телеграме: <a href={TELEGRAM_URL} class="link">@anyboom</a>
       </p>
       <h2>Социальные сети</h2>
       <p>А еще вы можете найти в разных местах</p>
