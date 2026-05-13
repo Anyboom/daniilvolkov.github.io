@@ -26,11 +26,11 @@ const description = props.description || SITE_DESCRIPTION;
     <SEO
       title={title}
       description={description}
-      {...props}
       extend={{
         meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
         ...props.extend,
       }}
+      {...props}
     />
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 font-sans">

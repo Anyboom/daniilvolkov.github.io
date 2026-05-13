@@ -6,6 +6,7 @@ type Props = HTMLAttributes<"a">;
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
+
 const isActive = href === pathname || (href !== "/" && pathname.replace(/\/$/, "").startsWith(href?.toString() ?? "/"));
 ---
 
@@ -16,6 +17,7 @@ const isActive = href === pathname || (href !== "/" && pathname.replace(/\/$/, "
     "dark:text-gray-400 dark:hover:text-white",
     { "!no-underline hover:!underline": !isActive },
     { "!underline": isActive },
+    className,
   ]}
   {...props}
 >
